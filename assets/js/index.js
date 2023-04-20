@@ -18,3 +18,5 @@ $('.navTrigger').click(function () {
     $("#mainListDiv").fadeIn();
 
 });
+
+
