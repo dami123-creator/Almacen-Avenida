@@ -369,7 +369,7 @@ body {
 
 
 .hero {
-	background-image: linear-gradient(#603813ad ,#b29f94c5), url(https://www.rd.com/wp-content/uploads/2021/10/GettyImages-1141996490-ADedit.jpg);
+	background-image: linear-gradient( #f8ad819d , #00e677a2), url(https://www.rd.com/wp-content/uploads/2021/10/GettyImages-1141996490-ADedit.jpg);
 	background-size: cover;
     width: 100%;
     height: 100vh;
@@ -404,22 +404,24 @@ body {
 }
 
 
-.cta {
-	background-color: #fff;
-	color: #000000;
-	padding: 10px 20px;
-	border-radius: 5px;
-	border: none;
-	font-size: 1.2rem;
-	cursor: pointer;
-	transition: all 0.3s ease-in-out;
-    background-color: transparent ;
-    border: 1px solid whitesmoke
-}
 
+.cta {
+    background-color: #fff;
+    color: #000000;
+    padding: 12px 24px; /* Aumentar el padding para hacer el botón más grande */
+    border-radius: 5px;
+    border: none;
+    font-size: 2rem;
+    
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+    border: 2px solid #fff; /* Cambiar el ancho y el color del borde */
+}
 .cta:hover {
-	background-color: #000;
-	color: #fff;
+    background-color: #000;
+    color: #fff;
+    border-color: #000; /* Cambiar el color del borde en hover */
 }
 
 
@@ -439,7 +441,8 @@ body {
     }
     
  .descripcion .desItem {
-    color: #fff;
+    color: #000000;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.979);
     font-size: 20px;
     margin-top: 50px;
     margin-bottom: 10px;
@@ -447,7 +450,7 @@ body {
     position: relative;
     animation: move-in 1s forwards;
     display: inline-block; /* Agregado */
-    width: calc(33.33% - 10px); /* Agregado para distribuir en 3 columnas */
+    width: calc(30% - 10px); /* Agregado para distribuir en 3 columnas */
     vertical-align: top; /* Agregado para alinear arriba */
       }
    
