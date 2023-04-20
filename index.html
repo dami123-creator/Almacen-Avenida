@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/be966d90c6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Almacen Avenida</title>
 </head>
@@ -15,10 +16,10 @@
             </div>
             <div id="mainListDiv" class="main_list">
                 <ul class="navlinks">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li class="navItems"><a href="#">About</a></li>
+                    <li class="navItems"><a href="#">Portfolio</a></li>
+                    <li class="navItems"><a href="#">Services</a></li>
+                    <li class="navItems"><a href="#">Contact</a></li>
                 </ul>
             </div>
             <span class="navTrigger">
@@ -32,9 +33,17 @@
     <main class="hero">
 		
 		<div class="cta-container">
-			<h1 class="titulo">Almacén Avenida </h1>
-            <h2 class= "t780" style="color: black;">780</h2>
-			<p>Descripción breve del producto o servicio</p>
+			<h1 class="titulo">Almacén Avenida <hr style="opacity: 0; margin: 0;">
+                <span>780</span></h1>
+              
+          
+			<div class="descripcion">
+             
+                 <h2 class ="desItem">Autoservicio familiar con los mejores precios</h2>
+                 <h2 class="desItem">Ahorra sin sacrificar calidad</h2>
+                 <h2 class="desItem">Catálogo de bebidas mas variado de la zona</h2>
+                
+                <!-- <li> Descubre la experiencia de comprar en el mejor autoservicio de la ciudad!</li></div> -->
 			<button class="cta">Ver Productos</button>
 		</div>
 
@@ -73,7 +82,34 @@
         
     </div>
   </section>
-
+  <div class="contenr-wsp">  <a href="#"><img src="./assets//images/png/wsp.png" class="imgWsp"></a></div>
+  <footer class="footer">
+    <div class="logo-footer">
+        <img class="imgFooter" src="./assets/images/logo/logo.png" alt="logo">
+    </div>
+    <div class="footer-info">
+      <div class="contact-info">
+        <h2 class="tFooter">CONTACTANOS</h2>
+        <hr class="footerLine">
+        <ul class="navFooter">
+          <li class="footerItems"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+          <li class="footerItems"><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+          <li class="footerItems"><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+          <li class="footerItems"><a style = "text-decoration: none;"href="#"><i class="fa-solid fa-phone"></i> +541166845</a></li>
+        </ul>
+      </div>
+      <div class="location-info">
+        <h2 class="tFooter">DONDE ESTAMOS</h2>
+        <hr class="footerLine">
+        <div class="address">
+         
+        <i class="fa-solid fa-location-dot itemUbi"></i> <p class="direccion"> Calle Falsa 1234 </p>
+         
+        </div>
+      </div>
+    </div>
+   
+  </footer>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
