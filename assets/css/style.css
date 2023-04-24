@@ -95,6 +95,7 @@ body {
     padding-bottom: 20px;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
+    z-index: 99;
 }
 
 
@@ -348,9 +349,6 @@ body {
 
 
 
-
-
-
 .myH2 {
 	text-align:center;
 	font-size: 4rem;
@@ -369,7 +367,7 @@ body {
 
 
 .hero {
-	background-image: linear-gradient( #4d36299d , #165436a2), url(https://dmrqkbkq8el9i.cloudfront.net/Pictures/2000xAny/9/2/9/271929_supermarketaisleshelves_521159.jpg);
+	background-image: linear-gradient( #4533299d , #131816a2), url(https://dmrqkbkq8el9i.cloudfront.net/Pictures/2000xAny/9/2/9/271929_supermarketaisleshelves_521159.jpg);
 	background-size: cover;
     width: 100%;
     height: 100vh;
@@ -395,7 +393,8 @@ body {
 }
 
 .cta-container .titulo {
-    background: linear-gradient(45deg, #000000, #00e677);
+    /* background: linear-gradient(45deg, #000000, #00e677); */
+    background: white;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 	font-size: 15rem;
@@ -450,12 +449,13 @@ body {
     }
     
  .descripcion .desItem {
-    color: #000000;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.979);
+    color: hsl(0, 0%, 100%);
+    /* text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.979); */
     font-size: 20px;
     margin-top: 50px;
     margin-bottom: 10px;
     text-align: center;
+    font-weight:600;
     position: relative;
     animation: move-in 1s forwards;
     display: inline-block; /* Agregado */
@@ -465,9 +465,13 @@ body {
    
  
 .imgWsp{
+    position:fixed;
     width: 80px;
+    bottom: 20px;
+    right: 0;
     margin-bottom: 5px;
     margin-left: 8px;
+    z-index: 10;
 }
   
   @keyframes slideIn {
@@ -514,7 +518,7 @@ body {
   .image-container img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 70%;
     transition: filter 0.2s ease;
     z-index: 1;
   }
@@ -544,25 +548,25 @@ body {
     align-items: center;
     justify-content: center;
     z-index: 2;
-  }
-  
+}
+
   /* Estilo para el efecto hover */
-  .image-container:hover > img {
+.image-container:hover > img {
     filter: blur(3px);
-  }
-  
-  .image-container:hover .text-overlay {
+}
+
+.image-container:hover .text-overlay {
     visibility: visible;
     opacity: 1;
     } 
 /* responsive */
 @media screen and (max-width: 600px) {
     .grid-container {
-      grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     }
     .image-container img {
         width: 100%;
-      }
+    }
       /* Estilo para el texto overlay en dispositivos móviles y tabletas */
 /* Estilo para el texto overlay en dispositivos móviles y tabletas */
 .text-overlay {
@@ -619,6 +623,85 @@ visibility: inherit;
   
 }
 
+#ubic{
+    display: flex;
+    justify-content:center;
+    margin: 20px;
+    padding: 14px;
+}
+
+.container-map{
+    margin: 0 30px;
+}
+
+.container-ubic{
+    margin: 0 30px;
+}
+.container-ubic .direccion{
+    color:#000;
+    font-weight: 600;
+}
+
+.container-ubic .itemUbi {
+    color: #000;
+    font-size: 24px;
+    margin-bottom: 14px;
+    margin-right: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .contain .itemUbi:hover {
+    color: #00e677e1;
+    transform: scale(1.2);
+  }
+  
+/* combos */
+.contenedor-combos{
+    display: grid;
+    justify-content: center;
+    background-color: #f7f7f7;
+    padding: 50px;
+}
+.cont-title{
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+.cont-p{
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    width: 600px;
+}
+.cont-p p{
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+#combos{
+    display: flex;
+    width: 600px;
+    height: 430px;
+    justify-content: center;
+}
+
+#combos img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: 0.5s ease;
+    border-radius: 8px;
+}
+
+#combos img:hover{
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
 
     .footer {
         background-color: black;
@@ -629,6 +712,7 @@ visibility: inherit;
         align-items: center;
         flex-direction: column;
         padding: 50px 0;
+        z-index: 0;
       }
       
       .footerLine{
