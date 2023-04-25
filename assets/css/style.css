@@ -73,20 +73,12 @@ body {
 }
 
 .nav div.main_list ul li a:hover {
-    color: #00E676;
     color: #FFA500;
 }
 
 
 /* Home section */
 
-.home {
-    width: 100%;
-    height: 100vh;
-    background-image: url(../images/carro-de-la-compra-en-un-supermercado-40320116.jpg);
-    background-position: center top;
-	background-size:cover;
-}
 
 .navTrigger {
     display: none;
@@ -409,6 +401,23 @@ body {
  
 }
 
+@media screen and (max-width: 768px) {
+    .descripcion {
+      padding: 20px;
+    }
+    .des-container {
+      max-width: 100%;
+    }
+    .desItem {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    .titulo {
+      font-size: 6rem;
+    }
+  }
+  
+
 
 
 .cta {
@@ -446,40 +455,60 @@ body {
     animation: slideIn 1s ease-out; 
   }
 
-  /* .descripcion {
-	text-align: center;
-	margin-top: 50px;
-}
 
-.des-container {
-	display: inline-block;
-	text-align: left;
-	padding: 20px;
-	background-color: #fff;
-	border-radius: 10px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.desItem {
-	font-size: 2rem;
-	line-height: 1.5;
-	margin: 10px 0;
-}
-
-.desItem:before {
-	content: "";
-	color: #f7a172;
-	margin-right: 10px;
-} */
-.imgWsp{
-    position:fixed;
-    width: 80px;
+.contenr-wsp {
+    position: fixed;
     bottom: 20px;
     right: 0;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     margin-left: 8px;
     z-index: 10;
-}
+  }
+  
+  .subirPagina {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 28px;
+    height: 28px;
+    background-color: #FFA500 ;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .fa-chevron-up {
+    font-size: 20px;
+    color: white;
+  }
+  
+  .wp-link {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+
+  .imgWsp {
+    margin: 10px auto;
+    width: 60px;
+  }
+  
+  
+  
+  
+  
+  
+  
+
+
+
+  
   
   @keyframes slideIn {
     0% {
@@ -613,10 +642,12 @@ body {
 /* responsive */
 @media screen and (max-width: 600px) {
     .grid-container {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .image-container img {
-        width: 100%;
+        width: 300px;
     }
       /* Estilo para el texto overlay en dispositivos móviles y tabletas */
 /* Estilo para el texto overlay en dispositivos móviles y tabletas */
@@ -706,6 +737,54 @@ visibility: inherit;
     color: #00e677e1;
     transform: scale(1.2);
   }
+
+  /* For screens smaller than 768px */
+@media screen and (max-width: 767px) {
+    #ubic{
+        display: flex;
+        flex-direction: column;
+    }
+    .container-ubic {
+      text-align: center;
+    }
+  
+    
+  
+    .container-map iframe {
+      width: 100%;
+      height: 300px;
+    }
+  }
+  
+  /* For screens between 768px and 1024px */
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    #ubic{
+        display: flex;
+        flex-direction: column;
+    }
+    .container-ubic {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .container-map iframe {
+      width: 100%;
+      height: 400px;
+    }
+  }
+  
+  /* For screens larger than 1024px */
+  @media screen and (min-width: 1025px) {
+    
+  
+    .container-ubic h2.tFooter {
+      margin-right: 50px;
+    }
+  
+   
+  }
+  
   
 /* combos */
 .contenedor-combos{
@@ -753,6 +832,42 @@ visibility: inherit;
     filter: contrast(120%);
 }
 
+@media screen and (max-width: 767px) {
+    #combos{
+        width: auto;
+        height: 250px;
+        margin: 0;
+    }
+    #combos img:hover{
+        width: 150px;
+    }
+    .cont-p{
+        margin: 10px auto;
+        width: auto;
+    }
+    .cont-p p{
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    #combos{
+        width: auto;
+        height: 350px;
+    }
+    #combos img:hover{
+        width: 200px;
+    }
+    .cont-p{
+        margin: 10px 0;
+        width: auto;
+    }
+    .cont-p p{
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+}
+/* FOOTER */
 
     .footer {
         background-color: black;
@@ -865,9 +980,10 @@ visibility: inherit;
       }
   
   @media screen and (max-width: 768px) {
+    
    
       .logo-footer {
-       
+       display: none;
         margin-bottom: 50px;
       }
       
@@ -889,7 +1005,6 @@ visibility: inherit;
     
       .tFooter {
      
-        font-size: 16px;
         text-decoration: none;
        
       }
@@ -917,7 +1032,7 @@ visibility: inherit;
       .footer-info {
        
 
-        margin-top: -50px;
+        margin-top: 30px;
         max-width: 1200px;
       }
       
@@ -928,17 +1043,7 @@ visibility: inherit;
     
       }
       
-.hero {
-	background-image: linear-gradient( #f7a1729d , #131816a2), url(https://dmrqkbkq8el9i.cloudfront.net/Pictures/2000xAny/9/2/9/271929_supermarketaisleshelves_521159.jpg);
-	background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
+
 
 
 
